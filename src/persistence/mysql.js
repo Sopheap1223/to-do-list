@@ -16,7 +16,7 @@ let pool;
 
 async function init() {
 
-    console.log("Attempting to connect to MySQL at host: ${DB_HOST}");
+    console.log(`Attempting to connect to MySQL at host: ${DB_HOST}`);
     await waitPort({ 
         host: DB_HOST, 
         port: 3306,
@@ -39,7 +39,7 @@ async function init() {
             err => {
                 if (err) return rej(err);
 
-                console.log("Connected to mysql db at host ${DB_HOST}");
+                console.log(`Connected to mysql db at host ${DB_HOST}`);
                 acc();
             },
         );
